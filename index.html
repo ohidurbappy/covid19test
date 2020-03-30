@@ -1,0 +1,738 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#0a0b0f">
+    <title>Covid19 Test</title>
+
+    <meta name="author" content="Ohidur Rahman Bappy" />
+    <meta name="keywords" content="Covid 19 Test, Coronavirus" />
+    <meta name="description" content="Covid19 Test Online Tool by Ohidur.com" />
+
+    <meta property="og:site_name" content="ohidur.com" />
+    <meta property="og:site" content="https://ohidur.com" />
+    <meta property="og:title" content="Covid19 Test by Ohidur.com" />
+    <meta property="og:description" content="Covid19 CoronaVirus Online Test tool" />
+    <meta property="og:image" content="https://ohidur.com/covid19test/img/covid19.jpg" />
+    <meta property="og:url" content="https://ohidur.com/covid19test" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <form method="POST" action="">
+    <div class="container-md ">
+
+        <div class="d-flex justify-content-center  mt-2">
+
+            <div class="row">
+                <div class="col-md-5 "><img src="img/coro.png" class="img-fluid  float-sm-right   mt-3 lefter " /></div>
+                <div class="col-md-7 ">
+                    <h1 class="text-left">COVID-19 SELF TEST</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <span id="clicks" class="invisible"></span>
+        <span id=""></span>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs " id="myTab" role="tablist" style="display:none">
+            <li class="nav-item  invisible">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                    aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                    aria-controls="profile" aria-selected="false">Profile</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab"
+                    aria-controls="messages" aria-selected="false">Messages</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                    aria-controls="settings" aria-selected="false">Settings</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="bobypains-tab" data-toggle="tab" href="#bobypains" role="tab"
+                    aria-controls="bobypains" aria-selected="false">bobypains-tab</a>
+            </li>
+
+            <li class="nav-item invisible">
+                <a class="nav-link" id="headache-tab" data-toggle="tab" href="#headache" role="tab"
+                    aria-controls="headache" aria-selected="false">headache-tab</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="fever-tab" data-toggle="tab" href="#fever" role="tab" aria-controls="fever"
+                    aria-selected="false">bfever-tab</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="breathing-tab" data-toggle="tab" href="#breathing" role="tab"
+                    aria-controls="breathing" aria-selected="false">breathing-tab</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="fatigue-tab" data-toggle="tab" href="#fatigue" role="tab"
+                    aria-controls="fatigue" aria-selected="false">fatigue-tab</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="traveled-tab" data-toggle="tab" href="#traveled" role="tab"
+                    aria-controls="traveled" aria-selected="false">traveled-tab</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="infected-tab" data-toggle="tab" href="#infected" role="tab"
+                    aria-controls="infected" aria-selected="false">infected-tab</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="sick-tab" data-toggle="tab" href="#sick" role="tab" aria-controls="sick"
+                    aria-selected="false">sick-tab</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" id="diagnosis-tab" data-toggle="tab" href="#diagnosis" role="tab"
+                    aria-controls="diagnosis" aria-selected="false">diagnosis-tab</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+                            <div class="text-center"><img src="img/c2.png" class=" img-fluid" /></div>
+                            
+                            <h2 class="mb-5 text-center">আপনার কি কাশি আছে?</h2>
+                            <div class="input-group mb-3">
+
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClick()" />
+                            </div>
+                            <div class="input-group mb-3">
+
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="next" class="nexttab btn btn-danger invisible" />
+                <input type="button" value="Prev" class="prevtab btn btn-primary invisible" />
+            </div>
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/coldd.png" class=" img-fluid" /></div>
+                            <h2 class="mb-5 text-center">আপনার কি ঠান্ডা লেগেছে?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClick()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+
+            </div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/icons8-diarrhea-100.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনার কি ডায়রিয়া হচ্ছে?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClick()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+
+            </div>
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/sorethroat.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনি গলা ব্যথা অনুভব করেন?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClick()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="bobypains" role="tabpanel" aria-labelledby="bobypains-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/pain1.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনার কি শরীরের ব্যথা হচ্ছে?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClick()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="headache" role="tabpanel" aria-labelledby="headache-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/headache.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনার মাথাব্যথা হচ্ছে?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClick()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="fever" role="tabpanel" aria-labelledby="fever-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/fever.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনার কি জ্বর আছে <br /> (তাপমাত্রা 37.8 ° C এবং তার
+                                বেশি)?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClick()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="breathing" role="tabpanel" aria-labelledby="breathing-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/breathe.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনার কি শ্বাসকষ্ট হচ্ছে?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClickdouble()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="fatigue" role="tabpanel" aria-labelledby="fatigue-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/fatigue.jpg" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনি কি ক্লান্তি অনুভব করছেন?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClickdouble()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="traveled" role="tabpanel" aria-labelledby="traveled-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/14days2.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনি কি গত 14 দিনের মধ্যে সম্প্রতি ভ্রমণ করেছেন?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClicktriple()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="infected" role="tabpanel" aria-labelledby="infected-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/history_infected.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনার কি COVID-19 এ সংক্রামিত <br> কোনও অঞ্চলে ভ্রমণের ইতিহাস
+                                রয়েছে?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClicktriple()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="sick" role="tabpanel" aria-labelledby="sick-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/doctor.png" class=" img-fluid" /></div>
+                            <h2 class="mb-4 text-center">আপনার কোনও কোভিড -19 রোগীর সাথে সরাসরি যোগাযোগ রয়েছে বা আপনি
+                                <br> কোনও ইতিবাচক কভিড -19 রোগীর যত্ন নিচ্ছেন?</h2>
+                            <div class="input-group mb-3">
+                                <input type="button" value="হ্যাঁ"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="onClicktriple()" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="button" value="না"
+                                    class="nexttab btn btn-primary btn-lg form-control form-control-lg"
+                                    onclick="noClick()" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="tab-pane" id="diagnosis" role="tabpanel" aria-labelledby="diagnosis-tab">
+                <div class="d-flex justify-content-center m-3">
+                    <div class=" card shadow shadow-sm">
+                        <div class="card-body">
+
+                            <div class="text-center"><img src="img/answer.png" class=" img-fluid" /></div>
+                            <hr style="border-top:4px solid #000000; margin-bottom:0px;" />
+                            <h5 class="mb-1  text-left">ফলাফল:</h5>
+                            <h4 class="mb-1  text-left">আপনার <br /> কভিড -19 থাকার ঝুঁকি</h4>
+                            <h2 id="holder"></h2>
+                            <p id="resulthold" class="  font-weight-bold" style="color:#000000;"></p>
+                            <div class="input-group mb-3">
+                                <input type="button" value="" class="nexttab invisible" />
+                                <input type="submit" name="Button1" value="পুনরায় পরীক্ষা করুন" id="Button1"
+                                    class=" btn btn-primary btn-lg form-control form-control-lg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="button" value="<< Prev" class="prevtab btn btn-primary invisible" />
+                <input type="button" value="Next >>" class="nexttab btn btn-danger invisible" />
+            </div>
+            <div class="d-flex justify-content-center  mb-2">
+                <span class="text-center">Powered by<br />
+                    <a href="https://ohidur.com"> <img src="https://ohidur.com/img/favicon.png"
+                            class="img-fluid" /></a></span>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="border-bottom:3px solid #007bff"><img src="img/coro.png"
+                            class="img-fluid " height="60" />
+                        <h5 class="modal-title" id="exampleModalLabel">COVID-19 SELF TEST</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <b>এটি একটি COVID-19 স্ব-মূল্যায়ন সরঞ্জাম যা WHO নির্দেশিকাগুলির ভিত্তিতে ক্রমাঙ্কিত হয়েছিল।
+                            এটি ডায়াগনস্টিক টুল নয়।</b>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">এগিয়ে যান >></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function ShowPopup(title, body) {
+
+            $("#exampleModal").modal("show");
+        }
+        function tester() {
+            $("#exampleModal").modal("show");
+        }
+    </script>
+    <script type="text/javascript">
+        onclick            /* -------------------------------------------------------------
+                          bootstrapTabControl
+                      ------------------------------------------------------------- */
+        function bootstrapTabControl() {
+            var i, items = $('.nav-link'), pane = $('.tab-pane');
+            // next
+            $('.nexttab').on('click', function () {
+                for (i = 0; i < items.length; i++) {
+                    if ($(items[i]).hasClass('active') == true) {
+                        break;
+                    }
+                }
+                if (i < items.length - 1) {
+                    // for tab
+                    $(items[i]).removeClass('active');
+                    $(items[i + 1]).addClass('active');
+                    // for pane
+                    $(pane[i]).removeClass('show active');
+                    $(pane[i + 1]).addClass('show active');
+                }
+
+            });
+            // Prev
+            $('.prevtab').on('click', function () {
+                for (i = 0; i < items.length; i++) {
+                    if ($(items[i]).hasClass('active') == true) {
+                        break;
+                    }
+                }
+                if (i != 0) {
+                    // for tab
+                    $(items[i]).removeClass('active');
+                    $(items[i - 1]).addClass('active');
+                    // for pane
+                    $(pane[i]).removeClass('show active');
+                    $(pane[i - 1]).addClass('show active');
+                }
+            });
+        }
+        bootstrapTabControl();
+
+
+        var clicks = 0;
+        function onClick() {
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+            switch (clicks) {
+                case 0:
+                case 1:
+                case 2:
+                    document.getElementById("holder").innerHTML = 'কম';
+                    document.getElementById("holder").style.color = '#90ee90';
+                    document.getElementById("resulthold").innerHTML = 'আপনি চাপে থাকতে পারেন, কিছুটা বিশ্রাম নিন।';
+                    // code block
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    document.getElementById("holder").innerHTML = 'মধ্যম';
+                    document.getElementById("holder").style.color = '#ffbf00';
+                    document.getElementById("resulthold").innerHTML = 'নিয়মিত জল পান করুন এবং ব্যক্তিগত ভাল স্বাস্থ্য পরীক্ষা করুন। আপনার স্বাস্থ্যের দিকে মনোযোগ দিন এবং দুই দিন পর আবার পরীক্ষা করুন ';
+                    // code block
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                    document.getElementById("holder").innerHTML = 'উচ্চ';
+                    document.getElementById("holder").style.color = '#ff5500';
+                    document.getElementById("resulthold").innerHTML = 'অবিলম্বে একটি ডাক্তার সঙ্গে দেখা করুন। আতঙ্কিত হবেন না, নিজেকে বন্ধু এবং পরিবার থেকে বিচ্ছিন্ন করুন।';
+
+                    // code block
+                    break;
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                    document.getElementById("holder").innerHTML = 'মারাত্মক।';
+                    document.getElementById("holder").style.color = '#FF0000';
+                    document.getElementById("resulthold").innerHTML = 'আতঙ্কিত হবেন না, বন্ধুবান্ধব এবং পরিবার থেকে নিজেকে বিচ্ছিন্ন করুন';
+
+                    // code block
+                    break;
+                default:
+                    // code block
+                    document.getElementById("holder").innerHTML = 'HELLO.';
+            }
+        };
+        function onClickdouble() {
+            clicks += 2;
+            document.getElementById("clicks").innerHTML = clicks;
+            switch (clicks) {
+                case 0:
+                case 1:
+                case 2:
+                    document.getElementById("holder").innerHTML = 'কম';
+                    document.getElementById("holder").style.color = '#90ee90';
+                    document.getElementById("resulthold").innerHTML = 'আপনি চাপে থাকতে পারেন, কিছুটা বিশ্রাম নিন।';
+                    // code block
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    document.getElementById("holder").innerHTML = 'মধ্যম';
+                    document.getElementById("holder").style.color = '#ffbf00';
+                    document.getElementById("resulthold").innerHTML = 'নিয়মিত জল পান করুন এবং ব্যক্তিগত ভাল স্বাস্থ্য পরীক্ষা করুন। আপনার স্বাস্থ্যের দিকে মনোযোগ দিন এবং দুই দিন পর আবার পরীক্ষা করুন ';
+                    // code block
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                    document.getElementById("holder").innerHTML = 'উচ্চ';
+                    document.getElementById("holder").style.color = '#ff5500';
+                    document.getElementById("resulthold").innerHTML = 'অবিলম্বে একটি ডাক্তার সঙ্গে দেখা করুন। আতঙ্কিত হবেন না, নিজেকে বন্ধু এবং পরিবার থেকে বিচ্ছিন্ন করুন।';
+
+                    // code block
+                    break;
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                    document.getElementById("holder").innerHTML = 'মারাত্মক।';
+                    document.getElementById("holder").style.color = '#FF0000';
+                    document.getElementById("resulthold").innerHTML = 'আতঙ্কিত হবেন না, বন্ধুবান্ধব এবং পরিবার থেকে নিজেকে বিচ্ছিন্ন করুন';
+
+                    // code block
+                    break;
+                default:
+                    // code block
+                    document.getElementById("holder").innerHTML = 'HELLO.';
+            }
+        };
+        function onClicktriple() {
+            clicks += 3;
+            document.getElementById("clicks").innerHTML = clicks;
+            switch (clicks) {
+                case 0:
+                case 1:
+                case 2:
+                    document.getElementById("holder").innerHTML = 'কম';
+                    document.getElementById("holder").style.color = '#90ee90';
+                    document.getElementById("resulthold").innerHTML = 'আপনি চাপে থাকতে পারেন, কিছুটা বিশ্রাম নিন।';
+                    // code block
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    document.getElementById("holder").innerHTML = 'মধ্যম';
+                    document.getElementById("holder").style.color = '#ffbf00';
+                    document.getElementById("resulthold").innerHTML = 'নিয়মিত জল পান করুন এবং ব্যক্তিগত ভাল স্বাস্থ্য পরীক্ষা করুন। আপনার স্বাস্থ্যের দিকে মনোযোগ দিন এবং দুই দিন পর আবার পরীক্ষা করুন ';
+                    // code block
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                    document.getElementById("holder").innerHTML = 'উচ্চ';
+                    document.getElementById("holder").style.color = '#ff5500';
+                    document.getElementById("resulthold").innerHTML = 'অবিলম্বে একটি ডাক্তার সঙ্গে দেখা করুন। আতঙ্কিত হবেন না, নিজেকে বন্ধু এবং পরিবার থেকে বিচ্ছিন্ন করুন।';
+
+                    // code block
+                    break;
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                    document.getElementById("holder").innerHTML = 'মারাত্মক।';
+                    document.getElementById("holder").style.color = '#FF0000';
+                    document.getElementById("resulthold").innerHTML = 'আতঙ্কিত হবেন না, বন্ধুবান্ধব এবং পরিবার থেকে নিজেকে বিচ্ছিন্ন করুন';
+
+                    // code block
+                    break;
+                default:
+                    // code block
+                    document.getElementById("holder").innerHTML = 'HELLO.';
+            }
+        };
+
+        function noClick() {
+            clicks += 0;
+            document.getElementById("clicks").innerHTML = clicks;
+            switch (clicks) {
+                case 0:
+                case 1:
+                case 2:
+                    document.getElementById("holder").innerHTML = 'কম';
+                    document.getElementById("holder").style.color = '#90ee90';
+                    document.getElementById("resulthold").innerHTML = 'আপনি চাপে থাকতে পারেন, কিছুটা বিশ্রাম নিন।';
+                    // code block
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    document.getElementById("holder").innerHTML = 'মধ্যম';
+                    document.getElementById("holder").style.color = '#ffbf00';
+                    document.getElementById("resulthold").innerHTML = 'নিয়মিত জল পান করুন এবং ব্যক্তিগত ভাল স্বাস্থ্য পরীক্ষা করুন। আপনার স্বাস্থ্যের দিকে মনোযোগ দিন এবং দুই দিন পর আবার পরীক্ষা করুন ';
+                    // code block
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                    document.getElementById("holder").innerHTML = 'উচ্চ';
+                    document.getElementById("holder").style.color = '#ff5500';
+                    document.getElementById("resulthold").innerHTML = 'অবিলম্বে একটি ডাক্তার সঙ্গে দেখা করুন। আতঙ্কিত হবেন না, নিজেকে বন্ধু এবং পরিবার থেকে বিচ্ছিন্ন করুন।';
+
+                    // code block
+                    break;
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                    document.getElementById("holder").innerHTML = 'মারাত্মক';
+                    document.getElementById("holder").style.color = '#FF0000';
+                    document.getElementById("resulthold").innerHTML = 'আতঙ্কিত হবেন না, নিজেকে বন্ধু এবং পরিবার থেকে বিচ্ছিন্ন করুন।';
+
+                    // code block
+                    break;
+                default:
+                    // code block
+                    document.getElementById("holder").innerHTML = 'HELLO.';
+            }
+        };
+    </script>
+</body>
+</html>
